@@ -1,0 +1,41 @@
+header {
+    background: $primary-color;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 25px 0;
+    width: 100%;
+    .container {
+        display: flex;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+}
+
+i {
+  margin-left: 5px;
+}
+
+.header-logo {
+    display: inline;
+    width: 30%;
+    img {
+        width: 200px;
+    }
+}
+
+.header-menu {
+    float: right;
+    text-align: right;
+    width: 70%;
+    a {
+        color: $font-color;
+        font-weight: 500;
+        font-size: 15px;
+        padding-left: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        &.hover-color {
+            color: $active-color;
+        }
+    }
+}
