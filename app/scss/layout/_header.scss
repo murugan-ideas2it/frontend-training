@@ -1,0 +1,73 @@
+@import 'helpers/_variables.scss';
+
+a {
+    color: $font-color;
+    text-decoration: none;
+}
+
+header {
+    background: $primary-color;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 25px 0;
+    width: 100%;
+
+    .container {
+        display: flex;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+}
+
+i {
+    margin-left: 5px;
+}
+
+.header-logo {
+    display: inline;
+    width: 30%;
+
+    img {
+        max-width: 150px;
+        max-height: 30px;
+    }
+}
+
+.header-menu {
+    float: right;
+    text-align: right;
+    width: 70%;
+
+    a {
+        font-size: 15px;
+        padding-left: 20px;
+        text-transform: uppercase;
+
+        &.hover-color {
+            color: $secondary-color;
+        }
+    }
+}
+
+.header-icon {
+    display: none;
+}
+@media screen and (max-width: 1030px) {
+    .header-menu {
+        a {
+            font-size: 12px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .header-menu {
+        display: none;
+    }
+
+    .header-icon {
+        float: right;
+        text-align: right;
+        width: 70%;
+        display: block;
+    }
+}

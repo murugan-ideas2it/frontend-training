@@ -1,0 +1,137 @@
+@import 'layout/_header.scss';
+@import 'layout/_grid.scss';
+@import 'layout/_footer.scss';
+
+body {
+    background-color: $background-color;
+    color: $font-color;
+    font-family: $font-family;
+    margin: 0;
+}
+
+section {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
+
+    ul {
+        padding: 25px 0;
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+    }
+
+    .breadcrumb {
+        width: 50%;
+
+        li {
+            display: inline;
+            font-size: 15px;
+            font-weight: 500;
+            color: $secondary-color;
+
+            a {
+                &:hover {
+                    color: $secondary-color;
+                }
+            }
+        }
+
+        li+li:before {
+            padding: 0;
+            color: $font-color;
+            content: "/\00a0";
+        }
+    }
+
+    .list-view {
+        text-align: right;
+        width: 50%;
+
+        .pad-right {
+            padding-right: 20px;
+        }
+
+        .current-list {
+            color: $secondary-color;
+        }
+
+        .big-icon {
+            font-size: 20px;
+        }
+    }
+}
+
+.pagination {
+    background-color: $primary-color;
+
+    .container {
+        display: block;
+        margin-left: 10%;
+        margin-right: 10%;
+        width: 80%;
+        font-size: 12px;
+        font-weight: 400;
+        padding: 30px 0 60px;
+    }
+
+    .page-message {
+        float: left;
+        text-align: left;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .pages {
+        float: right;
+
+        a {
+            color: $paginate-color;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 2px 5px;
+
+            &.active {
+                background-color: $secondary-color;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section {
+
+        .breadcrumb {
+
+            li {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .pagination {
+
+        .page-message {
+            width: 100%;
+            text-align: center;
+            font-size: 14px;
+            padding-bottom: 10px;
+        }
+
+        .pages {
+            width: 100%;
+            text-align: center;
+
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+}
