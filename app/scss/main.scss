@@ -48,15 +48,34 @@ section {
         }
     }
 
-    .list-view {
+    .grid-view {
         text-align: right;
         width: 50%;
+        display: block;
 
         .pad-right {
             padding-right: 20px;
         }
 
-        .current-list {
+        .current-select {
+            color: $secondary-color;
+        }
+
+        .big-icon {
+            font-size: 20px;
+        }
+    }
+
+    .list-view {
+        text-align: right;
+        width: 50%;
+        display: none;
+
+        .pad-right {
+            padding-right: 20px;
+        }
+
+        .current-select {
             color: $secondary-color;
         }
 
@@ -111,6 +130,14 @@ section {
             li {
                 font-size: 12px;
             }
+        }
+
+        .list-view {
+            display: block;
+        }
+
+        .grid-view {
+            display: none;
         }
     }
 }

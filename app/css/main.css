@@ -284,12 +284,23 @@ section {
       padding: 0;
       color: #2F2727;
       content: "/\00a0"; }
+  section .grid-view {
+    text-align: right;
+    width: 50%;
+    display: block; }
+    section .grid-view .pad-right {
+      padding-right: 20px; }
+    section .grid-view .current-select {
+      color: #3C9BFD; }
+    section .grid-view .big-icon {
+      font-size: 20px; }
   section .list-view {
     text-align: right;
-    width: 50%; }
+    width: 50%;
+    display: none; }
     section .list-view .pad-right {
       padding-right: 20px; }
-    section .list-view .current-list {
+    section .list-view .current-select {
       color: #3C9BFD; }
     section .list-view .big-icon {
       font-size: 20px; }
@@ -322,7 +333,11 @@ section {
 
 @media screen and (max-width: 768px) {
   section .breadcrumb li {
-    font-size: 12px; } }
+    font-size: 12px; }
+  section .list-view {
+    display: block; }
+  section .grid-view {
+    display: none; } }
 
 @media screen and (max-width: 430px) {
   .pagination .page-message {
