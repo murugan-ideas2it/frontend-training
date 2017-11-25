@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>JS Task</title>
+    </head>
+    <body>
+        1st Task - <button id="dateTask">Click Me</button>
+        <br><br> 2nd Task - <input type="text" id="appendStr">
+        <br><br> 3rd Task - <input type="text" id="findStrSeries">
+        <br><br> 4th Task - <input type="text" id="findDupStr">
+        <br><br> 5th Task - <button id="arrayTask">Click Me</button>
+        <br><br>
+        <b>Output</b> :-
+        <h4></h4>
+        <script type="text/javascript">
+            var dateButton = document.querySelector('#dateTask');
+            var appendStrInput = document.querySelector('#appendStr');
+            var strSeriesInput = document.querySelector('#findStrSeries');
+            var findDupStrInput = document.querySelector('#findDupStr');
+            var arrayButton = document.querySelector('#arrayTask');
+            var outputHeader = document.querySelector('h4');
+
+            dateButton.onclick = function() {
+                var txtCont = '';
+                for (var i = 2010; i < 2026; i++) {
+                    var dateString = i + '-01-01';
+                    var day = new Date(dateString).getDay();
+                    if (day === 0) {
+                        txtCont += dateString + '\n';
+                    }
+                }
+                outputHeader.innerText = txtCont;
+            };
+
+            appendStrInput.onkeyup = function() {
+                var strVal = appendStrInput.value;
+                var strLength = strVal.length;
+                if (strLength > 2) {
+                    var lastThree = strVal.substr(strLength - 3);
+                    outputHeader.innerText = lastThree + strVal + lastThree;
+                } else {
+                    outputHeader.innerText = '';
+                }
+            };
+
+            strSeriesInput.onkeyup = function() {
+                var txtCont = '';
+                var strVal = strSeriesInput.value;
+                for (var i = 1; i <= strVal.length; i++) {
+                    txtCont += strVal.slice(0, i) + ',';
+                    if (i === strVal.length) {
+                        strVal = strVal.substr(1);
+                        i = 0;
+                    }
+                }
+                outputHeader.innerText = txtCont.replace(/,\s*$/, "");
+            };
+
+            findDupStrInput.onkeyup = function() {
+                var strVal = findDupStrInput.value;
+                var strLength = strVal.length;
+                if (strLength > 0) {
+                    var aStr = strVal.split('');
+                    for (var i = 0; i < strLength; i++) {
+                        var strCount = strVal.split(aStr[i]).length - 1;
+                        if (strCount === 1) {
+                            outputHeader.innerText = aStr[i];
+                            break;
+                        } else {
+                            outputHeader.innerText = '';
+                        }
+                    }
+                }
+            };
+
+            arrayButton.onclick = function() {
+                var outputArr = [];
+                var aInput1 = [1, 2, 3];
+                var aInput2 = [2, 30, 1];
+                var aMerge = aInput1.concat(aInput2);
+                for (var i = 0; i < aMerge.length; i++) {
+                    if (outputArr.indexOf(aMerge[i]) === -1) {
+                        outputArr.push(aMerge[i]);
+                    }
+                }
+                outputHeader.innerText = outputArr;
+            };
+        </script>
+    </body>
+</html>
