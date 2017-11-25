@@ -1,0 +1,13 @@
+1. Find 1st January is being a Sunday between 2010 and 2025
+2.create a new string from a given string taking the last 3 characters and added at both the front and back. The string length must be 3 or more
+3.function that generates all combinations of a string
+  Example string : 'dog'
+  Expected Output : d,do,dog,o,og,g
+4.function to find the first not repeated character
+  Sample arguments : 'abacddbec'
+  Expected output : 'e'
+5.Function to merge two arrays and removes all duplicates elements
+ Example:
+var array1 = [1, 2, 3];
+var array2 = [2, 30, 1];
+output: [3, 2, 30, 1]
