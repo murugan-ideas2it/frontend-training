@@ -50,6 +50,29 @@ i {
     width: 70%;
     display: block; } }
 
+.form-left-side-bar {
+  background-color: #4C5566;
+  display: table-cell;
+  font-size: 14px;
+  align-content: center;
+  align-items: center;
+  margin: 0;
+  width: 10%; }
+  .form-left-side-bar ul {
+    margin-top: 50px;
+    padding: 0; }
+  .form-left-side-bar li {
+    list-style: none;
+    color: #E7EBEF;
+    cursor: pointer;
+    border-bottom: 1px solid #7B7E84;
+    padding: 15px 15px;
+    position: relative; }
+    .form-left-side-bar li i {
+      position: absolute;
+      right: 30px;
+      top: 17px; }
+
 .profile-cards-grid .container {
   display: block;
   margin-left: 10%;
@@ -247,8 +270,7 @@ footer {
     footer .div-contact {
       float: left;
       width: 50%; }
-    footer .div-company
-.div-connect {
+    footer .div-company .div-connect {
       float: right;
       width: 50%; }
     footer .div-connect i {
@@ -258,7 +280,9 @@ body {
   background-color: #F0F4F8;
   color: #2F2727;
   font-family: "Source Sans Pro", sans-serif;
-  margin: 0; }
+  margin: 0;
+  width: 100%;
+  height: 100%; }
 
 section {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
@@ -330,6 +354,166 @@ section {
       .pagination .pages a.active {
         background-color: #3C9BFD;
         color: #FFFFFF; }
+
+.form-container {
+  display: table;
+  font-size: 14px;
+  position: fixed;
+  height: 100%;
+  width: 100%; }
+
+.form-content {
+  text-align: left;
+  display: table-cell;
+  width: 90%; }
+  .form-content form {
+    margin: 0 auto;
+    position: relative;
+    width: 60%; }
+  .form-content i {
+    cursor: pointer;
+    font-size: 18px; }
+  .form-content label {
+    padding-right: 10px;
+    vertical-align: top; }
+  .form-content input,
+  .form-content textarea,
+  .form-content select {
+    margin-right: 10px; }
+  .form-content .align-div-10 {
+    float: left;
+    width: 10%; }
+  .form-content .align-div-25 {
+    float: left;
+    width: 25%; }
+  .form-content .align-div-65 {
+    float: left;
+    width: 65%; }
+  .form-content .main-div-align {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    width: 100%; }
+  .form-content .margin-top-5 {
+    margin-top: 5px; }
+
+.def-button, .convert-button, .change-button {
+  background-color: #4C5566;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  color: #E7EBEF;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 6px 6px;
+  margin-top: 1%; }
+
+.convert-button {
+  margin-left: 38%; }
+
+.change-button {
+  margin-left: 50%; }
+
+.form-input, .input-text, .input-text-modal, .input-select, .input-textarea {
+  display: block;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #393A3C;
+  background-color: #FFF;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+.input-text {
+  height: 25px;
+  width: 80%; }
+
+.input-text-modal {
+  height: 25px;
+  width: 50%; }
+
+.input-select {
+  height: 30px;
+  width: 80%; }
+
+.input-textarea {
+  height: 50px;
+  width: 80%; }
+
+/* Modal Content */
+.modal-content {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  top: 10%;
+  background-color: #fefefe;
+  overflow: auto;
+  width: 40%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s;
+  margin-left: 400px; }
+
+/* The Close Button */
+.dismiss {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold; }
+  .dismiss:hover, .dismiss:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer; }
+
+.modal-header {
+  background-color: #4C5566;
+  color: #E7EBEF;
+  padding: 2px 16px;
+  text-align: center; }
+
+.modal-body {
+  padding: 15px 15px; }
+  .modal-body .mod-main-div {
+    padding-bottom: 5px;
+    position: relative;
+    display: inline-block;
+    width: 100%; }
+  .modal-body .mod-div-15 {
+    float: left;
+    width: 15%; }
+  .modal-body .mod-div-85 {
+    float: left;
+    width: 85%; }
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0; }
+  to {
+    bottom: 0;
+    opacity: 1; } }
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 @media screen and (max-width: 768px) {
   section .breadcrumb li {

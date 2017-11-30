@@ -1,0 +1,26 @@
+.form-left-side-bar {
+    background-color: $form-build-primary-color;
+    display: table-cell;
+    font-size: 14px;
+    align-content: center;
+    align-items: center;
+    margin:0;
+    width :10%;
+    ul {
+        margin-top: 50px;
+        padding: 0;
+    }
+    li {
+        list-style: none;
+        color: $form-build-font-color;
+        cursor: pointer;
+        border-bottom: 1px solid #7B7E84;
+        padding: 15px 15px;
+        position: relative;
+        i {
+            position: absolute;
+            right: 30px;
+            top: 17px;
+        }
+    }
+}
